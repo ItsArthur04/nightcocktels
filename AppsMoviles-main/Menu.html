@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="Menu.css">
+    <script src="Menu.js" defer></script>
+</head>
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <div class="logo">
+                <p>NightsCocktels</p>
+            </div>
+        </header>
+        <div id="preparation-time-banner" style="display: none; background-color: #333; color: white; padding: 10px; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000;">Tiempo estimado para tu pedido: <span id="preparation-time"></span></div>
+        <aside class="presentacion">
+            <div class="informacion">
+                <h1>Ordena bebida favorita</h1>
+                <div>
+                    <h2>Nuestra deliciosa bebidas están esperando por ti. Aquí verás una pequeña seleccion de sabrosos cocteles de renombre</h2>
+                </div>
+            </div>
+            <div class="presentacion--imagen">
+                <img src="https://bodegassalas.com/wp-content/uploads/2021/06/cocteles-con-vodka-para-preparar_Mesa-de-trabajo-1.jpg" alt="Imagen presentacion">
+            </div>
+        </aside>
+        <main class="comida">
+            <h2 class="comida--titulo">Bebidas populares</h2>
+            <div class="platos">
+                <article class="plato">
+                    <img src="https://png.pngtree.com/png-clipart/20231023/original/pngtree-strawberry-mojito-isolated-picture-image_13194093.png" alt="Mojito" class="small-image">
+                    <h1>Mojito de fresa</h1>
+                    <div class="plato--info">
+                        <p>$3.99</p>
+                        <button type="button" onclick="showPreparationTime('bebida')">+</button>
+                    </div> 
+                </article>
+                <article class="plato">
+                    <img src="https://png.pngtree.com/png-clipart/20240703/original/pngtree-irish-coffee-with-whipped-cream-and-a-stirrer-png-image_15473333.png" alt="Martini" class="small-image">
+                    <h1>Cafe Irlandes</h1>
+                    <div class="plato--info">
+                        <p>$5.99</p>
+                        <button type="button" onclick="showPreparationTime('bebida')">+</button>
+                    </div>                    
+                </article>
+                <article class="plato">
+                    <img src="https://www.pngplay.com/wp-content/uploads/13/Gin-And-Tonic-PNG-Photo-Image.png" alt="BM" class="small-image">
+                    <h1>Gin tonic</h1>
+                    <div class="plato--info">
+                        <p>$6.99</p>
+                        <button type="button" onclick="showPreparationTime('bebida')">+</button>
+                    </div>                    
+                </article>
+                <article class="plato">
+                    <img src="Imagenes/cocktail-yamazaki-radelaide-rob-roy.png" alt="RR" class="small-image">
+                    <h1>Rob Roy Escocés</h1>
+                    <div class="plato--info">
+                        <p>$10.99</p>
+                        <button type="button" onclick="showPreparationTime('bebida')">+</button>
+                    </div>                    
+                </article>
+            </div>
+                    </div>                    
+                </article>
+            </div>
+            <div class="cart"></div>
+            <button class="complete-purchase">Completar compra</button>
+        </main>
+        <button id="toggle-receipt-list">Mostrar/Ocultar Facturas</button>
+        <div id="receipt-list-container" style="display: none;">
+            <ul id="receipt-list"></ul>
+        </div>
+    </div>
+    <div id="receipt-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Recibo</h2>
+            <div id="receipt-content"></div>
+        </div>
+    </div>
+</body>
+</html>
+    
